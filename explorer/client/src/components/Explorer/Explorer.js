@@ -1,7 +1,9 @@
 // ***************** Explorer Selection Page *************** //
 // This page is for the user to select which explorer they want to go
 
-import React from "react";
+import React from 'react';
+import "./Explorer.css";
+import {Link} from 'react-router-dom';
 
 const Explorer = () => (
     <div>
