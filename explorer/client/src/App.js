@@ -6,7 +6,11 @@ import axios from 'axios';
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
-import Explorer from "./pages/Explorer";
+import Explorer from "./components/Explorer";
+import Galaxy from "./components/Galaxy";
+import Game from "./components/Game";
+import Ships from "./components/Ships";
+
 
 class App extends Component {
   state = {
@@ -115,8 +119,35 @@ class App extends Component {
           } else {
             return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
           } 
-        }
-        }/>
+        }}/>
+        <Route exact path = "/explorer" render = {()=> {
+          if(!loggedIn){
+            return <Redirect to = "/" />
+          } else {
+            return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
+          } 
+        }}/>
+        <Route exact path = "/galaxy" render = {()=> {
+          if(!loggedIn){
+            return <Redirect to = "/" />
+          } else {
+            return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
+          } 
+        }}/>
+        <Route exact path = "/game" render = {()=> {
+          if(!loggedIn){
+            return <Redirect to = "/" />
+          } else {
+            return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
+          } 
+        }}/>
+        <Route exact path = "/ships" render = {()=> {
+          if(!loggedIn){
+            return <Redirect to = "/" />
+          } else {
+            return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
+          } 
+        }}/>
         </div>
       </Router>
     );

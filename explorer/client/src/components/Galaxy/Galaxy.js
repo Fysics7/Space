@@ -8,7 +8,7 @@ const Galaxy = () => (
       <h1>Galaxy</h1>
       <p>
           Player can select the type of galaxy they want to play in:
-          Elliptical / Spiral
+          Elliptical or Spiral
       </p>
     </div>
   );

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const SignUp = (props)=> {
 	return (
 		<div>
-			<h1>SIGN UP</h1>
+			<h1>ACCOUNT CREATION</h1>
 			<Link to = "/" >Go to sign in</Link>
 			<form>
 				<label>Email</label><br/>

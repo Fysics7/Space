@@ -4,11 +4,11 @@ import {Link} from 'react-router-dom';
 
 const SignIn = (props)=> {
 	return (
-		<div>
-			<h1>EXPLORER</h1>
+		<div className="newUser">
+			<h1 className="pageTitle">SPACE EXPLORER</h1>
 			<Link to = "/signup" >Go to sign up</Link>
-			<form>
-				<label>Email</label><br/>
+			<form className="mainForm">
+				<label className="login">Login</label><br/>
 				<input value = {props.username} onChange = {props.handleChange} name='username' type='email' placeholder = 'example@email.com'/>
 				<br />
 				<label>Password</label><br/>

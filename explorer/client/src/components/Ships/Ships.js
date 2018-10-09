@@ -7,7 +7,8 @@ const Ships = () => (
     <div>
       <h1>Starships</h1>
       <p>
-        Images of Ships will go here 
+        Images of all Ships will go here!
+      
       </p>
     </div>
   );
