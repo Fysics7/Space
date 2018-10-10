@@ -6,18 +6,36 @@ const SignUp = (props)=> {
 	return (
 		<div>
 			<h1>ACCOUNT CREATION</h1>
-			<Link to = "/" >Go to sign in</Link>
-			<form>
-				<label>Email</label><br/>
-				<input value = {props.username} onChange = {props.handleChange} name='username' type='email' placeholder = 'example@email.com'/>
+			
+			<form className="createForm">
+				<label className="labelForm">First Name</label><br/>
+				<input value = {props.username} onChange = {props.handleChange} name='name' type='text' placeholder = 'first name here'/>
 				<br />
-				<label>Password</label><br/>
-				<input name='password' type='password' value = {props.password} onChange = {props.handleChange} />
+				<label>Last Name</label><br/>
+				<input name='name' type='text' placeholder = "last name here" value = {props.username} onChange = {props.handleChange} />
 				<br />
-				<button type = 'submit' name = "/auth/signup" onClick = {props.handleSubmit}>Sign Up</button>
+				<label>Email Address</label><br/>
+				<input name='name' type='email' placeholder = "email@email.com" value = {props.username} onChange = {props.handleChange} />
+				<br />
+				<label>Create a Password</label><br/>
+				<input name='password' type='password' placeholder = "6 characters" value = {props.password} onChange = {props.handleChange} />
+				<br />
+				<label>Name your Captain</label><br/>
+				<input name='username' type='name' value = {props.username} onChange = {props.handleChange} />
+				<br />
+				<label>Name your Ship</label><br/>
+				<input name='username' type='name' placeholder = "ship name here" value = {props.username} onChange = {props.handleChange} />
+				<br />
+        		<label>Captain Biography:
+				<br />
+				<textarea className="textarea" name="username" type="text" placeholder="Create a Bio for your Captain" value = {props.username} onChange = {props.handleChange} />
+				</label>
+				<br />
+				<button className="createButton" type = 'submit' name = "/auth/signup" onClick = {props.handleSubmit}>Create Account</button>
 			</form>
 		</div>
 	);
 };
+
 
 export default SignUp;

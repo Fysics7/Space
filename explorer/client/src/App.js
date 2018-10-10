@@ -6,7 +6,7 @@ import axios from 'axios';
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
-import NavTabs from "./components/NavTabs";
+import NavTabs from "./components/NavTabs/NavTabs";
 import Explorer from "./components/pages/Explorer";
 import Galaxy from "./components/pages/Galaxy";
 import Game from "./components/pages/Game";
