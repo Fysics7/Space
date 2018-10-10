@@ -6,10 +6,11 @@ import axios from 'axios';
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
-import Explorer from "./components/Explorer";
-import Galaxy from "./components/Galaxy";
-import Game from "./components/Game";
-import Ships from "./components/Ships";
+import NavTabs from "./components/NavTabs/NavTabs";
+import Explorer from "./components/pages/Explorer";
+import Galaxy from "./components/pages/Galaxy";
+import Game from "./components/pages/Game";
+import Ships from "./components/pages/Ships";
 
 
 class App extends Component {
@@ -120,38 +121,17 @@ class App extends Component {
             return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
           } 
         }}/>
-        <Route exact path = "/explorer" render = {()=> {
-          if(!loggedIn){
-            return <Redirect to = "/" />
-          } else {
-            return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
-          } 
-        }}/>
-        <Route exact path = "/galaxy" render = {()=> {
-          if(!loggedIn){
-            return <Redirect to = "/" />
-          } else {
-            return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
-          } 
-        }}/>
-        <Route exact path = "/game" render = {()=> {
-          if(!loggedIn){
-            return <Redirect to = "/" />
-          } else {
-            return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
-          } 
-        }}/>
-        <Route exact path = "/ships" render = {()=> {
-          if(!loggedIn){
-            return <Redirect to = "/" />
-          } else {
-            return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
-          } 
-        }}/>
-        </div>
+      <div>
+      <NavTabs />
+      <Route exact path="/explorer" component={Explorer} />
+      <Route exact path="/galaxy" component={Galaxy} />
+      <Route path="/game" component={Game} />
+      <Route path="/ships" component={Ships} />
+      </div>
+      </div>
       </Router>
-    );
+    )
   }
-}
+};
 
 export default App;
