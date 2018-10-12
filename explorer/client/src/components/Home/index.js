@@ -1,5 +1,5 @@
 // ***************** Home Selection Page *************** //
-// Home landing page of the application
+// Home landing page of the application after logging in
 
 import React from 'react';
 import "./style.css";
@@ -7,8 +7,8 @@ import "./style.css";
 const Home = (props) =>{
 	return (
 		<div>
-			<h1>You should only see this if you are logged in!
-				This page appears once the user has logged in
+			<h1>MAIN PAGE ===> This page will display the players' card -> with ship information / race / ship
+				information.  Below the player card, it will show the combat area.
 			</h1>
 			<p>{props.auth.username}</p>
 			<button onClick = {props.handleLogout}>Log Out</button>
