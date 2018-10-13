@@ -86,6 +86,7 @@ class App extends Component {
   };
 
   render() {
+    
     const loggedIn = this.state.auth.isAuthenticated;
     return (
       <Router>
@@ -121,13 +122,14 @@ class App extends Component {
             return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
           } 
         }}/>
-      <div>
-      <NavTabs />
-      <Route exact path="/explorer" component={Explorer} />
-      <Route exact path="/galaxy" component={Galaxy} />
-      <Route path="/game" component={Game} />
-      <Route path="/ships" component={Ships} />
-      </div>
+        <div>
+    <NavTabs />
+    <Route exact path="/explorer" component={Explorer} />
+    <Route exact path="/galaxy" component={Galaxy} />
+    <Route path="/game" component={Game} />
+    <Route path="/ships" component={Ships} />
+    </div>
+     
       </div>
       </Router>
     )
