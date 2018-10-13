@@ -36,6 +36,7 @@ const SignUp = (props)=> {
 		</div>
 	);
 };
+// Beside the form being on the sign up page, this will be where the user will select there species and ship
 
 
 export default SignUp;
